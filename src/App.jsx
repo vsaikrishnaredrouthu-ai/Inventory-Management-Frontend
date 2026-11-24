@@ -13,8 +13,8 @@ import Sales from './pages/Sales.jsx';
 import Orders from './pages/Orders.jsx';
 import Reports from './pages/Reports.jsx';
 import Users from './pages/Users.jsx';
+import WorkHours from './pages/WorkHours.jsx';
 import Notifications from './pages/Notifications.jsx';
-import Activity from './pages/Activity.jsx';
 import Profile from './pages/Profile.jsx';
 import Settings from './pages/Settings.jsx';
 import Help from './pages/Help.jsx';
@@ -40,10 +40,10 @@ export default function App() {
         <Route path="sales" element={<Sales />} />
         <Route path="orders" element={<Orders />} />
         <Route path="users" element={<Users />} />
+        <Route path="work-hours" element={<WorkHours />} />
         <Route path="analytics" element={<Analytics />} />
         <Route path="reports" element={<Reports />} />
         <Route path="notifications" element={<Notifications />} />
-        <Route path="activity" element={<Activity />} />
         <Route path="profile" element={<Profile />} />
         <Route path="settings" element={<Settings />} />
         <Route path="help" element={<Help />} />

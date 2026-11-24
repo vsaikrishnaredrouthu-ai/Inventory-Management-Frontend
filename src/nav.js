@@ -18,7 +18,8 @@ export function navFor(roleKey) {
     { to: '/analytics', label: 'Analytics', icon: 'ti-chart-line' },
     { to: '/reports', label: 'Reports', icon: 'ti-file-text' },
     { to: '/notifications', label: 'Notifications', icon: 'ti-bell', badge: true },
-    { to: '/activity', label: 'Activity history', icon: 'ti-history' },
+    // Activity history is for the Owner only.
+    ...(roleKey === 'owner' ? [{ to: '/activity', label: 'Activity history', icon: 'ti-history' }] : []),
     { to: '/profile', label: 'My profile', icon: 'ti-user' },
     { to: '/settings', label: 'Settings', icon: 'ti-settings' },
     { to: '/help', label: 'Help & support', icon: 'ti-help' },

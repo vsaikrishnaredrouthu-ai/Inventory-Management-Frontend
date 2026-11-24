@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import api from '../api.js';
 import { useAuth } from '../auth.jsx';
 import { BarChartBox, DonutChartBox, TrendChart } from '../charts.jsx';
+import ShiftCard from '../components/ShiftCard.jsx';
 import { navFor } from '../nav.js';
 import { Card, ErrorBox, Loading, PageHead, Stat, StatusBadge, dateTime, money, num, useApi, ROLE_LABEL } from '../ui.jsx';
 
@@ -52,6 +53,8 @@ export default function Dashboard() {
         title={`${greeting}, ${user.full_name.split(' ')[0]}`}
         subtitle={`${ROLE_LABEL[user.role_key] || user.role_name} dashboard · figures update as work is recorded`}
       />
+
+      <ShiftCard />
 
       <div className="grid-stats">
         {cards.map((card) => {
@@ -106,21 +109,6 @@ export default function Dashboard() {
             )}
           </Card>
         )}
-        <Card title="Recent activity" actions={<Link className="btn ghost sm" to="/activity">View all</Link>}>
-          {l.recent_activity.length === 0 ? <p className="muted">No activity yet.</p> : (
-            <ul className="list">
-              {l.recent_activity.map((a, i) => (
-                <li key={i}>
-                  <span className="dot off" aria-hidden="true" />
-                  <div style={{ flex: 1 }}>
-                    <div>{prettyAction(a.action)}{a.entity ? ` · ${a.entity}` : ''}</div>
-                    <div className="muted" style={{ fontSize: '0.82rem' }}>{dateTime(a.created_at)}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
-        </Card>
       </div>
     </>
   );

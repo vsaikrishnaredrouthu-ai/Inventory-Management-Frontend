@@ -83,7 +83,7 @@ export default function Analytics() {
         </>
       ) : (
         <>
-          <Empty title="Sales analytics are not part of your role">Stock and purchase figures are shown below.</Empty>
+          <Empty title="Sales analytics are not part of your role">Only the stock overview is available for your role.</Empty>
           {dash.data?.charts?.stock_by_category && (
             <Card title="Units in stock by category">
               <DonutChartBox labels={dash.data.charts.stock_by_category.map((r) => r.name)} values={dash.data.charts.stock_by_category.map((r) => r.units)} />

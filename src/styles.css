@@ -345,3 +345,11 @@ td .row-actions { display: flex; gap: 0.25rem; justify-content: flex-end; flex-w
 .stat-button .stat { height: 100%; }
 .stat-button:hover .stat { border-color: var(--primary); }
 .stat-button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Attendance card on the dashboard */
+.shift-row { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; justify-content: space-between; }
+.shift-row p { margin: 0; }
+.shift-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.mt { margin-top: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }

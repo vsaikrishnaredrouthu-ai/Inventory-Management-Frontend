@@ -4,6 +4,7 @@ import { useAuth } from '../auth.jsx';
 import LineItems, { itemsTotal } from '../components/LineItems.jsx';
 import OrderModal from '../components/OrderModal.jsx';
 import { Badge, Card, Empty, ErrorBox, Field, Loading, Modal, PageHead, Pager, dateTime, fieldErrors, money, num, today, daysAgo, useApi, useDebounced, useToast } from '../ui.jsx';
+import UpiQR from '../components/UpiQR.jsx';
 
 const PAYMENT = { cash: 'Cash', card: 'Card', upi: 'UPI', bank_transfer: 'Bank transfer' };
 
@@ -127,6 +128,9 @@ function NewSale({ onClose, onSaved }) {
             </span>
           </Field>
         </div>
+        {form.payment_method === 'upi' && (
+          <UpiQR amount={total} note={`Sale for ${form.customer_name || 'walk-in customer'}`} />
+        )}
         {errors.items && <p className="field-error">{errors.items}</p>}
         <LineItems value={items} onChange={setItems} priceLabel="Unit price (₹)" />
         <div className="totals">
