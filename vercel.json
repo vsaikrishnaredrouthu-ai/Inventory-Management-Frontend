@@ -1,7 +1,16 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://YOUR-APP.up.railway.app/api/:path*" },
-    { "source": "/uploads/:path*", "destination": "https://YOUR-APP.up.railway.app/uploads/:path*" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/:path*",
+      "destination": "https://inventory-management-backend-production-668396b1.up.railway.app/api/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "https://inventory-management-backend-production-668396b1.up.railway.app/uploads/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
