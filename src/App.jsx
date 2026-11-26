@@ -14,6 +14,7 @@ import Orders from './pages/Orders.jsx';
 import Reports from './pages/Reports.jsx';
 import Users from './pages/Users.jsx';
 import WorkHours from './pages/WorkHours.jsx';
+import Activity from './pages/Activity.jsx';
 import Notifications from './pages/Notifications.jsx';
 import Profile from './pages/Profile.jsx';
 import Settings from './pages/Settings.jsx';
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="sales" element={<Sales />} />
         <Route path="orders" element={<Orders />} />
         <Route path="users" element={<Users />} />
+        <Route path="activity" element={<Activity />} />
         <Route path="work-hours" element={<WorkHours />} />
         <Route path="analytics" element={<Analytics />} />
         <Route path="reports" element={<Reports />} />
